@@ -18,7 +18,11 @@
   
       document.getElementById("openPopup").onclick = () => {
         // Open popup on another origin
-        window.open("https://oauth-window.netlify.app/index.html", "_blank", "width=600,height=400");
+        const origin = window.location.origin;
+        window.open(
+         `https://oauth-window.netlify.app?origin=${encodeURIComponent(origin)}`,
+         "_blank",
+          "width=600,height=400");
       };
     </script>
 </body>
