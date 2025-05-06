@@ -19,8 +19,10 @@
       document.getElementById("openPopup").onclick = () => {
         // Open popup on another origin
         const origin = window.location.origin;
+        const oauth_url = "https://app.hubspot.com/oauth/authorize?client_id=0350813b-a638-498f-bd9e-c6b64f543bc1&redirect_uri=https://jailer.konnectify.io/oauth/callback/hubspot-new&scope=crm.objects.line_items.read%20crm.objects.carts.write%20content%20crm.objects.line_items.write%20crm.objects.carts.read%20crm.pipelines.orders.write%20crm.pipelines.orders.read%20crm.objects.orders.write%20oauth%20crm.objects.owners.read%20crm.objects.orders.read%20communication_preferences.write%20crm.objects.invoices.read%20conversations.read%20conversations.write%20crm.objects.services.read%20crm.objects.users.read%20crm.objects.services.write%20tickets%20crm.objects.contacts.write%20crm.objects.users.write%20e-commerce%20crm.objects.custom.read%20sales-email-read%20crm.objects.custom.write%20communication_preferences.read_write%20crm.objects.companies.write%20crm.lists.write%20crm.objects.companies.read%20crm.lists.read%20crm.objects.deals.read%20crm.objects.deals.write%20crm.objects.quotes.write%20crm.objects.contacts.read%20crm.objects.quotes.read"
         window.open(
-         `https://oauth-window.netlify.app?origin=${encodeURIComponent(origin)}`,
+        //  `https://oauth-window.netlify.app?origin=${encodeURIComponent(origin)}`,
+         oauth_url,
          "_blank",
           "width=600,height=400");
       };
